@@ -1,0 +1,236 @@
+.video {
+    overflow: hidden;
+    &__wrapper {
+        padding: 50px 0;
+
+        @include vp-767 {
+            padding: 30px 0;
+        }
+    }
+
+    &__left {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        
+        @include vp-767 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .container-title {
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        min-height: 100px;
+        position: relative;
+    }
+
+    .container-title span {
+        position: absolute;
+        top: 0;
+        left: -55px;
+        height: 100px;
+        line-height: 100px;
+        z-index: 1;
+        font-size: 64px;
+        font-weight: 700;
+        color: #1A1919;
+        opacity: .035;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1360px) {
+            left: 25px;
+            font-size: 50px;
+        }
+
+        @include vp-767 {
+            font-size: 40px;
+            left: 0;
+        }
+    }
+
+    .container-small {
+        font-size: 30px;
+        line-height: 38px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 58px;
+
+        @include vp-767 {
+            font-size: 20px;
+            margin-top: 50px;
+            line-height: 30px;
+        }
+    }
+
+    &__text {
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 145%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: rgba(116, 116, 116, 1);
+        margin: 20px 0 0;
+
+        @include vp-767 {
+            margin: 10px 0 0;
+            font-size: 14px;
+        }
+    }
+
+    &__buttons {
+        position: static;
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 120px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 80px;
+        @include vp-767 {
+            display: none;
+        }
+    }
+
+    &__buttons-mobile {
+        display: none;
+
+        @include vp-767 {
+            display: flex;
+            position: static;
+            flex-direction: row-reverse;
+            max-width: 120px;
+            width: 100%;
+            gap: 10px;
+            justify-content: start;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        margin: 0;
+        flex-shrink: 0;
+        &::after {
+            display: none;
+        }
+    
+        width: 50px;
+        height: 50px;
+        transition: .3s;
+        svg {
+          transition: .3s;
+        }
+
+        &:hover {
+           opacity: 0.7;
+        }
+
+        @include vp-767 {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
+    .swiper-button-next {
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__slider.swiper {
+        width: 100vw;
+        height: 100%;
+        overflow-x: visible;
+        margin-left: calc(-50vw + 50%); 
+        margin-right: calc(-50vw + 50%);
+        @include vp-767 {
+            width: 100%;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .swiper-wrapper {
+        height: auto;
+    }
+
+    .swiper-slide {
+        width: auto;
+    }
+
+    .video-preview {
+        width: auto;
+        height: 536px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1; 
+        }
+
+        @include vp-767 {
+            height: 500px;
+            width: 320px;
+        }
+
+        @include vp-389 {
+            height: 450px;
+            width: 280px;
+        }
+    }
+
+    .video-play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: transform 0.3s;
+        z-index: 2;
+        &:hover {
+          transform: translate(-50%, -50%) scale(1.1);
+          
+          .play-icon circle {
+            stroke: #ff0000; // Изменение цвета при наведении
+          }
+        }
+        
+        &:focus {
+          outline: none;
+        }
+
+        svg {
+            width: 50px;
+            height: 50px;
+
+            @include vp-389 {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

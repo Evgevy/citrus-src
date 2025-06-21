@@ -1,0 +1,598 @@
+.intro {
+    background: rgba(20, 21, 17, 1);
+    background-image: url(../img/sprite/bg.svg);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &__wrapper {
+        padding: 170px 0 0;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 21px;
+        margin-bottom: 42px;
+    }
+
+    &__span {
+        font-family: SF Pro Display;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: -3%;
+        text-align: center;
+        text-transform: uppercase;
+        color: rgba(251, 251, 251, 0.5);
+        margin: 0;
+
+        @include vp-1023 {
+            font-size: 24px;
+        }
+    }
+
+    &__title {
+        font-family: SF Pro Display;
+        font-weight: 600;
+        font-size: 112px;
+        line-height: 90%;
+        letter-spacing: -5%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #CDEB69;
+        margin: 0;
+
+        span {
+            color: rgba(251, 251, 251, 1);
+        }
+
+        @media screen and (max-width: 1150px) {
+            font-size: 100px;
+        }
+
+        @include vp-1023 {
+            font-size: 76px;
+        }
+
+        @include vp-767 {
+            font-size: 56px;
+        }
+    }
+
+    &__text {
+        font-family: SF Pro Display;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 100%;
+        letter-spacing: -2%;
+        text-align: center;
+        color: rgba(251, 251, 251, 1);
+        margin: 0;
+    }
+
+    &__link {
+        max-width: 215px;
+        width: 100%;
+        background: rgba(205, 235, 105, 1);
+        font-family: SF Pro Display;
+        font-weight: 500;
+        font-size: 17px;
+        leading-trim: Cap height;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: rgba(20, 21, 17, 1);
+        padding: 18px;
+        border-radius: 8px;
+        display: inline;
+        text-align: center;
+        transition: .3s;
+    }
+
+    &__link:hover {
+        background: #85A716;
+    }
+
+
+
+    
+    &__slider-wrapper {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto -10px;
+        overflow-x: visible;
+    }
+
+    .intro__slider {
+        width: 100%; 
+        height: 540px; 
+        overflow-x: visible;
+    }
+    
+    
+    .swiper-slide {
+        border-radius: 32px 32px 0 0;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 24px 0px;
+        position: relative;
+        overflow: hidden;
+        color: #000;
+        user-select: none;
+
+        @include vp-767 {
+            padding: 24px 16px 0;
+        }
+    }
+    
+    
+    .slide-green {
+        background: linear-gradient(144.1deg, #B7FF6A 1.45%, #CDEB69 85.52%);
+        position: relative;
+
+         
+        .slide-tag {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 14px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(20, 21, 17, 0.5);
+            margin: 0 auto 24px;
+            background: rgba(20, 21, 17, 0.1);
+            max-width: 220px;
+            padding: 8px 16px;
+            border-radius: 100px;
+        }
+
+        .slide-title {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 48px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(20, 21, 17, 1);
+            margin: 0 0 24px;
+
+            @media screen and (max-width: 1150px) {
+                font-size: 40px;
+            }
+
+            @include vp-767 {
+                font-size: 32px
+            }
+        }
+
+        .slide-desc {
+            font-family: SF Pro Display;
+            font-weight: 400;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 130%;
+            letter-spacing: -2%;
+            text-align: center;
+            color: rgba(20, 21, 17, 0.5);
+            margin: 0 0 32px;
+
+            @include vp-767 {
+                font-size: 16px;
+            }
+        }
+
+        .slide-link {
+            font-family: SF Pro Display;
+            font-weight: 500;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            text-decoration-skip-ink: auto;
+            color: rgba(20, 21, 17, 1);
+            text-align: center;
+            transition: .3s;
+        }
+
+        .slide-link:hover {
+            opacity: 0.7;
+            
+        }
+
+        .slide-image {
+            width: 450px;
+            height: 450px;
+            position: relative;
+            bottom: 40px;
+            transform: rotate(5deg);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .slide-green::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(124, 181, 78, 1);
+        top: 50px;
+        left: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            left: 16px;
+        }
+    }
+
+    .slide-green::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(124, 181, 78, 1);
+        top: 50px;
+        right: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            right: 16px;
+        }
+    }
+
+    .slide-green.swiper-slide-active {
+        .slide-image {
+            bottom: -20px;
+        }
+    }
+
+    .slide-dark {
+        background: linear-gradient(139.42deg, #252525 2.23%, #5C5C5C 97.41%);
+        position: relative;
+        
+        .slide-tag {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 14px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(251, 251, 251, 0.5);
+            margin: 0 auto 24px;
+            background: rgba(20, 21, 17, 0.4);
+            max-width: 220px;
+            padding: 8px 16px;
+            border-radius: 100px;
+        }
+
+        .slide-title {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 48px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(251, 251, 251, 1);
+            margin: 0 0 24px;
+
+            @media screen and (max-width: 1150px) {
+                font-size: 40px;
+            }
+
+            @include vp-767 {
+                font-size: 32px
+            }
+        }
+
+        .slide-desc {
+            font-family: SF Pro Display;
+            font-weight: 400;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 130%;
+            letter-spacing: -2%;
+            text-align: center;
+            color: rgba(251, 251, 251, 0.5);
+            margin: 0 0 32px;
+
+            @include vp-767 {
+                font-size: 16px;
+            }
+        }
+
+        .slide-link {
+            font-family: SF Pro Display;
+            font-weight: 500;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            text-decoration-skip-ink: auto;
+            color: rgba(251, 251, 251, 1);
+            text-align: center;
+            transition: .3s;
+        }
+
+        .slide-link:hover {
+            opacity: 0.7;
+            
+        }
+
+        .slide-image {
+            width: 490px;
+            height: 300px;
+            position: relative;
+            bottom: -10px;
+            left: -35px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .slide-dark::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(20, 21, 17, 0.5);
+        top: 50px;
+        left: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            left: 16px;
+        }
+    }
+
+    .slide-dark::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(20, 21, 17, 0.5);
+        top: 50px;
+        right: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            right: 16px;
+        }
+    }
+
+    .slide-white {
+        background: linear-gradient(149.22deg, #F0F0F0 40.88%, #E3E3E3 86.7%);
+        position: relative;
+
+
+        .slide-tag {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 14px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: #FBFBFB;
+            margin: 0 auto 24px;
+            background: rgba(20, 21, 17, 0.2);
+            max-width: 220px;
+            padding: 8px 16px;
+            border-radius: 100px;
+            position: relative;
+            z-index: 11;
+        }
+
+        .slide-title {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 48px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(20, 21, 17, 1);
+            margin: 0 0 24px;
+
+            @media screen and (max-width: 1150px) {
+                font-size: 40px;
+            }
+
+            @include vp-767 {
+                font-size: 32px
+            }
+        }
+
+        .slide-desc {
+            font-family: SF Pro Display;
+            font-weight: 400;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 130%;
+            letter-spacing: -2%;
+            text-align: center;
+            color: rgba(20, 21, 17, 0.5);
+            margin: 0 0 32px;
+
+            @include vp-767 {
+                font-size: 16px;
+            }
+        }
+
+        .slide-link {
+            font-family: SF Pro Display;
+            font-weight: 500;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            text-decoration-skip-ink: auto;
+            color: rgba(20, 21, 17, 1);
+            text-align: center;
+            transition: .3s;
+        }
+
+        .slide-link:hover {
+            opacity: 0.7;
+            
+        }
+
+        .slide-image {
+            width: 490px;
+            height: 300px;
+            position: relative;
+            bottom: 45px;
+            left: -35px;
+            transform: rotate(-5deg);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .slide-white::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(197, 197, 196, 1);
+        top: 50px;
+        left: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            left: 16px;
+        }
+    }
+
+    .slide-white::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(197, 197, 196, 1);
+        top: 50px;
+        right: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            right: 16px;
+        }
+    }
+
+    .slide-white.swiper-slide-active {
+        .slide-image {
+            bottom: -40px;
+        }
+    }
+    
+    .slide-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    .swiper-slide-prev {
+        transform: translateY(62px) rotate(-5deg) !important;
+    }
+    
+    .swiper-slide-next {
+        transform: translateY(62px) rotate(5deg) !important;
+    }
+    
+    .swiper-slide-active {
+        transform: rotate(0deg) !important;
+    }
+    
+
+    &__buttons {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        padding: 4px;
+        display: none;
+        flex-direction: row-reverse;
+        max-width: 85px;
+        width: 100%;
+        transform: translateX(-50%);
+        align-items: center;
+        gap: 4px;
+        align-self: flex-end;
+        border-radius: 12px;
+        background: rgba(251, 251, 251, 1);
+        @include vp-389 {
+            display: flex;
+        }
+        
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        margin: 0;
+        flex-shrink: 0;
+        &::after {
+            display: none;
+        }
+    
+        width: 40px;
+        height: 40px;
+        transition: .3s;
+        svg {
+          transition: .3s;
+        }
+
+        &:hover {
+           opacity: 0.7;
+        }
+
+        @include vp-767 {
+            width: 36px;
+            height: 36px;
+        }
+    }
+    
+    .swiper-button-next {
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+
+    // .b {
+    //     transform: translate3d(-130px, 200px, -220px) rotateX(-25deg) rotateY(50deg) scale(1);
+    // }
+}

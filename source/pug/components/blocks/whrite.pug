@@ -1,0 +1,34 @@
+mixin whrite()
+    section.whrite 
+        .container 
+            .whrite__wrapper 
+                .whrite__top
+                    .whrite__titles
+                        h2.whrite__title Про нас пишут
+                    .whrite__buttons 
+                        .swiper-button-next.whrite__next
+                            +icon('arrow-left', 50, 50) 
+                        .swiper-button-prev.whrite__prev
+                            +icon('arrow-left', 50, 50) 
+                .whrite__slider.swiper(data-slider="whrite")
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .whrite__logo 
+                                img(src="img/content/whrite1.png" alt="Логотип")
+                            p.whrite__text Отбеливание зубов часто называют неприятной процедурой, однако она не должна быть болезненной. Об этом 5 января в интервью радио Sputnik
+                            a(href="#!").whrite__link Подробнее
+                        .swiper-slide 
+                            .whrite__logo 
+                                img(src="img/content/whrite2.png" alt="Логотип")
+                            p.whrite__text Согласно недавнему исследованию, мониторинг минеральной плотности костной ткани (BMD) наряду с надлежащим уходом...
+                            a(href="#!").whrite__link Подробнее
+                        .swiper-slide 
+                            .whrite__logo 
+                                img(src="img/content/whrite1.png" alt="Логотип")
+                            p.whrite__text Отбеливание зубов часто называют неприятной процедурой, однако она не должна быть болезненной. Об этом 5 января в интервью радио Sputnik
+                            a(href="#!").whrite__link Подробнее
+                .whrite__buttons-mobile
+                    .swiper-button-next.whrite__next
+                        +icon('arrow-left', 50, 50) 
+                    .swiper-button-prev.whrite__prev
+                        +icon('arrow-left', 50, 50) 

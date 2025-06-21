@@ -1,0 +1,201 @@
+mixin podcast()
+    section.podcast 
+        .container 
+            .podcast__wrapper
+                .podcast__left
+                    <div class="container-title"><span class="position-absolute">Подкаст</span>
+                        <div class="container-small">Стоматология без границ: <br>секреты от эксперта</div>
+                        p.podcast__text Подкаст с основателем Smile Clinic — Ильей Александровичем Скляровым
+                    </div>
+                    .podcast__buttons 
+                        .swiper-button-next.podcast__next
+                            +icon('arrow-left', 50, 50) 
+                        .swiper-button-prev.podcast__prev
+                            +icon('arrow-left', 50, 50) 
+                .podcast__slider.swiper(data-slider="podcast")
+                    .swiper-wrapper
+                        .swiper-slide 
+                            <div class="audio-slide__content">
+                                <span class="audio-slide__episode">Выпуск 1</span>
+                                <h3 class="audio-slide__title">ИИ в стоматологии: сотрудничать <br>или избегать</h3>
+                                <p class="audio-slide__subtitle">Трейлер подкаста</p>
+                                
+                                <div class="audio-player">
+                                <button class="audio-player__play-btn">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="18" fill="#83754E"/>
+                                    <path d="M23.7617 18.3602L15.1217 23.6603V13.0602L23.7617 18.3602Z" fill="white"/>
+                                    </svg>
+                                </button>
+                                
+                                <div class="audio-player__progress">
+                                    <div class="audio-player__progress-bar">
+                                        +icon('progress', 390, 32)
+                                    </div>
+                                </div>
+                                
+                                <button class="audio-player__volume-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                    </svg>
+                                </button>
+                                </div>
+                                
+                                <a href="https://music.yandex.ru" class="audio-slide__link" target="_blank"> Слушать на Яндекс.Музыке
+                                </a>
+                            </div>
+                        .swiper-slide 
+                            <div class="audio-slide__content">
+                                <span class="audio-slide__episode">Выпуск 1</span>
+                                <h3 class="audio-slide__title">ИИ в стоматологии: сотрудничать <br>или избегать</h3>
+                                <p class="audio-slide__subtitle">Трейлер подкаста</p>
+                                
+                                <div class="audio-player">
+                                <button class="audio-player__play-btn">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="18" fill="#83754E"/>
+                                    <path d="M23.7617 18.3602L15.1217 23.6603V13.0602L23.7617 18.3602Z" fill="white"/>
+                                    </svg>
+                                </button>
+                                
+                                <div class="audio-player__progress">
+                                    <div class="audio-player__progress-bar">
+                                    +icon('progress', 390, 32)
+                                    </div>
+                                </div>
+                                
+                                <button class="audio-player__volume-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                    </svg>
+                                </button>
+                                </div>
+                                
+                                <a href="https://music.yandex.ru" class="audio-slide__link" target="_blank">Слушать на Яндекс.Музыке
+                                </a>
+                            </div>
+                        .swiper-slide 
+                            <div class="audio-slide__content">
+                                <span class="audio-slide__episode">Выпуск 1</span>
+                                <h3 class="audio-slide__title">ИИ в стоматологии: сотрудничать <br>или избегать</h3>
+                                <p class="audio-slide__subtitle">Трейлер подкаста</p>
+                                
+                                <div class="audio-player">
+                                <button class="audio-player__play-btn">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="18" fill="#83754E"/>
+                                    <path d="M23.7617 18.3602L15.1217 23.6603V13.0602L23.7617 18.3602Z" fill="white"/>
+                                    </svg>
+                                </button>
+                                
+                                <div class="audio-player__progress">
+                                    <div class="audio-player__progress-bar">
+                                    +icon('progress', 390, 32)
+                                    </div>
+                                </div>
+                                
+                                <button class="audio-player__volume-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                    </svg>
+                                </button>
+                                </div>
+                                
+                                <a href="https://music.yandex.ru" class="audio-slide__link" target="_blank">Слушать на Яндекс.Музыке
+                                </a>
+                            </div>
+                        .swiper-slide 
+                            <div class="audio-slide__content">
+                                <span class="audio-slide__episode">Выпуск 1</span>
+                                <h3 class="audio-slide__title">ИИ в стоматологии: сотрудничать <br>или избегать</h3>
+                                <p class="audio-slide__subtitle">Трейлер подкаста</p>
+                                
+                                <div class="audio-player">
+                                <button class="audio-player__play-btn">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="18" fill="#83754E"/>
+                                    <path d="M23.7617 18.3602L15.1217 23.6603V13.0602L23.7617 18.3602Z" fill="white"/>
+                                    </svg>
+                                </button>
+                                
+                                <div class="audio-player__progress">
+                                    <div class="audio-player__progress-bar">
+                                    +icon('progress', 390, 32)
+                                    </div>
+                                </div>
+                                
+                                <button class="audio-player__volume-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                    </svg>
+                                </button>
+                                </div>
+                                
+                                <a href="https://music.yandex.ru" class="audio-slide__link" target="_blank">Слушать на Яндекс.Музыке
+                                </a>
+                            </div>
+                        .swiper-slide 
+                            <div class="audio-slide__content">
+                                <span class="audio-slide__episode">Выпуск 1</span>
+                                <h3 class="audio-slide__title">ИИ в стоматологии: сотрудничать <br>или избегать</h3>
+                                <p class="audio-slide__subtitle">Трейлер подкаста</p>
+                                
+                                <div class="audio-player">
+                                <button class="audio-player__play-btn">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="18" fill="#83754E"/>
+                                    <path d="M23.7617 18.3602L15.1217 23.6603V13.0602L23.7617 18.3602Z" fill="white"/>
+                                    </svg>
+                                </button>
+                                
+                                <div class="audio-player__progress">
+                                    <div class="audio-player__progress-bar">
+                                    +icon('progress', 390, 32)
+                                    </div>
+                                </div>
+                                
+                                <button class="audio-player__volume-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                    </svg>
+                                </button>
+                                </div>
+                                
+                                <a href="https://music.yandex.ru" class="audio-slide__link" target="_blank">Слушать на Яндекс.Музыке
+                                </a>
+                            </div>
+                        .swiper-slide 
+                            <div class="audio-slide__content">
+                                <span class="audio-slide__episode">Выпуск 1</span>
+                                <h3 class="audio-slide__title">ИИ в стоматологии: сотрудничать <br>или избегать</h3>
+                                <p class="audio-slide__subtitle">Трейлер подкаста</p>
+                                
+                                <div class="audio-player">
+                                <button class="audio-player__play-btn">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="18" fill="#83754E"/>
+                                    <path d="M23.7617 18.3602L15.1217 23.6603V13.0602L23.7617 18.3602Z" fill="white"/>
+                                    </svg>
+                                </button>
+                                
+                                <div class="audio-player__progress">
+                                    <div class="audio-player__progress-bar">
+                                    +icon('progress', 390, 32)
+                                    </div>
+                                </div>
+                                
+                                <button class="audio-player__volume-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                    </svg>
+                                </button>
+                                </div>
+                                
+                                <a href="https://music.yandex.ru" class="audio-slide__link" target="_blank">Слушать на Яндекс.Музыке
+                                </a>
+                            </div>
+                .podcast__buttons-mobile
+                    .swiper-button-next.podcast__next
+                        +icon('arrow-left', 50, 50) 
+                    .swiper-button-prev.podcast__prev
+                        +icon('arrow-left', 50, 50) 

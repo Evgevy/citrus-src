@@ -1,0 +1,54 @@
+mixin header(headerMods, currentUrl)
+  -
+    
+
+  header.header(class=headerMods data-header data-media="(max-width: 1023px)")
+    .container
+      .header__wrapper
+        .header__logo 
+          a(href="/").header__logo-link 
+            +icon('logo-header', 103, 128)
+            p центр <br>инновационных <br class="br-two">техннологий
+       
+        ul.header__menu
+          
+            li.header__item 
+                a(href="#!").header__link Каталог
+                    +icon('sub', 20, 20)
+                ul.header__sub-list 
+                    li.header__sub-item 
+                        a(href="#!").header__sub-link Токарная обработка
+                    li.header__sub-item 
+                        a(href="#!").header__sub-link Фрезерная обработка
+                    li.header__sub-item 
+                        a(href="#!").header__sub-link Токарно-фрезерная обработка
+            li.header__item 
+                a(href="#!").header__link Сервис и инжиниринг
+            li.header__item 
+                a(href="#!").header__link О компании
+            li.header__item 
+                a(href="#!").header__link Техноблог
+            li.header__item 
+                a(href="#!").header__link Контакты
+                
+        .header__contacts 
+            .header__social 
+                a(href="#!")
+                    +icon('what', 42, 42)
+                a(href="#!")
+                    +icon('tel', 42, 42)
+            .header__next 
+                a(href="tel:+ 7 (777) 777-77-77") + 7 (777) 777-77-77
+                span.header__time Пт-Пт / 08:00 - 19:00
+                    +icon('ligh', 7, 7)
+        button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
+          span
+          span
+          span   
+        button(type="button").header__btn Оставить заявку  
+        
+  //- //- block modals
+  //- //-   +modal("modal--feedback")(data-modal="feedback")
+  //- //-       +popup()
+  //- //-   +modal("modal--thanks")(data-modal="thanks")
+  //- //-       +popup-thanks()

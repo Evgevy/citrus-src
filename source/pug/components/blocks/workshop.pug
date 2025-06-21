@@ -1,0 +1,33 @@
+mixin workshop()
+    section.workshop 
+        .container 
+            .workshop__wrapper 
+                .workshop__titles.titles
+                    h2.workshop__title.title Про мастерскую
+                    +icon('title', 395, 21)
+                .workshop__slider.swiper(data-slider="workshop")
+                    .swiper-wrapper 
+                        .workshop__slide.swiper-slide 
+                            .workshop__image 
+                                img(src="img/content/workshop1.webp" alt="Фото изделий" width="440" height="273")
+                            p.workshop__text Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: социально-экономическое развитие обеспечивает актуальность модели развития!
+                            span Стало интересно? Посмотрите полный каталог и выберете игрушку по душе.
+                            a(href="#!").workshop__link Выбрать игрушку
+                                +icon('intro-arrow', 32, 32)
+                        .workshop__slide.swiper-slide 
+                            .workshop__big-image 
+                                img(src="img/content/workshop2.webp" alt="Фото изделий2" width="469" height="713")
+                        .workshop__slide.swiper-slide 
+                            .workshop__bg 
+                                img(src="img/content/group-stars.webp" alt="Задний фон из звезд" width="441" height="415")
+                            p.workshop__text.workshop__text--bottom Так же подписывайтесь на мои каналы и сообщества, там я публикую интересные лайфхаки по вязанию, рассказываю о предстоящих новинках и многое другое.
+                            .workshop__social 
+                                a(href="#!")
+                                    +icon('icon-insta', 32, 32) 
+                                a(href="#!") 
+                                    +icon('icon-pint', 32, 32) 
+                                a(href="#!") 
+                                    +icon('icon-telega', 32, 32) 
+                            .workshop__image-small 
+                                img(src="img/content/workshop3.webp" alt="Фото изделий3" width="440" height="320") 
+                .swiper-pagination.workshop__pagination

@@ -1,0 +1,341 @@
+.card {
+    overflow: hidden;
+
+    &__wrapper {
+        padding: 150px 0;
+
+        @include vp-767 {
+            padding: 90px 0;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: visible;
+    }
+
+    .swiper-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+
+        @media screen and (max-width: 1120px) {
+            display: flex;
+            gap: 0;
+            height: auto;
+        }
+    }
+
+    .swiper-slide {
+        @media screen and (max-width: 1120px) {
+            overflow: hidden;
+        }
+    }
+
+    .swiper-slide.slide-dark1 {
+        background: linear-gradient(139.42deg, #252525 2.23%, #5C5C5C 97.41%);
+        padding: 28px 32px 32px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 32px;
+        // overflow: hidden;
+        .card__text {
+            font-family: SF Pro Display;
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 90%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(251, 251, 251, 1);
+            margin: 0 0 23px;
+
+            @include vp-767 {
+                font-size: 32px;
+            }
+
+            @include vp-389 {
+                font-size: 24px;
+            }
+        }
+
+        .card__list {
+            list-style: disc;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 30px;
+            max-width: 320px;
+        }
+
+        .card__item {
+            list-style: disc;
+            font-family: SF Pro Display;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 130%;
+            letter-spacing: -2%;
+            color: rgba(251, 251, 251, 0.5);
+            margin: 0 0 0px;
+        }
+
+        .card__image {
+            width: 100%;
+            height: auto;
+            margin: 32px auto 0;
+            display: block;
+            position: relative;
+            
+            svg {
+                width: 292px;
+                height: 225px;
+                flex-shrink: 0;
+                margin: 0 auto;
+                display: block;
+                position: relative;
+                transition: .3s;
+            }
+
+            img {
+                position: absolute;
+                top: -40px;
+                width: 434px;
+                height: 395px;
+                object-fit: contain;
+                opacity: 0;
+                transition: .3s;
+
+                @media screen and (max-width: 1150px) {
+                    top: -40px;
+                    width: 390px;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .card__image:hover svg {
+            opacity: 0;
+        }
+
+        .card__image:hover img {
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+
+    .card__link {
+        max-width: 100%;
+        background: rgba(20, 21, 17, 1);
+        font-family: SF Pro Display;
+        font-weight: 500;
+        font-size: 17px;
+        leading-trim: Cap height;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: rgba(251, 251, 251, 1);
+        padding: 18px;
+        border-radius: 12px;
+        text-align: center;
+        margin-top: auto;
+        transition: .3s;
+    }
+
+    .card__link:hover {
+        background: rgba(43, 45, 37, 1);
+    }
+
+
+    .swiper-slide.slide-white1 {
+        background: linear-gradient(149.22deg, #F0F0F0 2.22%, #E9E9E9 86.7%);
+        // overflow: hidden;
+        padding: 28px 32px 32px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 32px;
+        .card__text {
+            font-family: SF Pro Display;
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 90%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(20, 21, 17, 1);
+            margin: 0 0 23px;
+
+            @include vp-767 {
+                font-size: 32px;
+            }
+
+            @include vp-389 {
+                font-size: 24px;
+            }
+        }
+
+        .card__list {
+            list-style: disc;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 30px;
+            max-width: 320px;
+        }
+
+        .card__item {
+            list-style: disc;
+            font-family: SF Pro Display;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 130%;
+            letter-spacing: -2%;
+            color: rgba(20, 21, 17, 0.5);
+            margin: 0 0 0px;
+        }
+
+        .card__image {
+            width: 100%;
+            height: auto;
+            margin: 32px auto 0;
+            display: block;
+            position: relative;
+            svg {
+                width: 292px;
+                height: 225px;
+                flex-shrink: 0;
+                margin: 0 auto;
+                display: block;
+                position: relative;
+                transition: .3s;
+            }
+
+            img {
+                position: absolute;
+                top: -40px;
+                width: 434px;
+                height: 395px;
+                object-fit: contain;
+                opacity: 0;
+                transition: .3s;
+
+                @media screen and (max-width: 1150px) {
+                    top: -40px;
+                    width: 390px;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .card__image:hover svg {
+            opacity: 0;
+        }
+
+        .card__image:hover img {
+            opacity: 1;
+        }
+    }
+
+    .swiper-slide.slide-green1 {
+        background: linear-gradient(139.24deg, #BEFF78 1.31%, #CDEB69 99.04%);
+        // overflow: hidden;
+
+        padding: 28px 32px 32px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 32px;
+        .card__text {
+            font-family: SF Pro Display;
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 90%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(20, 21, 17, 1);
+            margin: 0 0 23px;
+
+            @include vp-767 {
+                font-size: 32px;
+            }
+
+            @include vp-389 {
+                font-size: 24px;
+            }
+        }
+
+        .card__list {
+            list-style: disc;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 30px;
+            max-width: 320px;
+        }
+
+        .card__item {
+            list-style: disc;
+            font-family: SF Pro Display;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 130%;
+            letter-spacing: -2%;
+            color: rgba(20, 21, 17, 0.5);
+            margin: 0 0 0px;
+        }
+
+        .card__image {
+            width: 100%;
+            height: auto;
+            margin: 32px auto 0;
+            display: block;
+            position: relative;
+            svg {
+                width: 292px;
+                height: 225px;
+                flex-shrink: 0;
+                margin: 0 auto;
+                display: block;
+                position: relative;
+                transition: .3s;
+            }
+
+            img {
+                position: absolute;
+                top: -40px;
+                width: 434px;
+                height: 395px;
+                object-fit: contain;
+                opacity: 0;
+                transition: .3s;
+
+                @media screen and (max-width: 1150px) {
+                    top: -40px;
+                    width: 390px;
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .card__image:hover svg {
+            opacity: 0;
+        }
+
+        .card__image:hover img {
+            opacity: 1;
+        }
+    }
+
+    .swiper-slide-prev {
+        transform: translateY(62px) rotate(-5deg) !important;
+    }
+    
+    .swiper-slide-next {
+        transform: translateY(62px) rotate(5deg) !important;
+    }
+    
+    .swiper-slide-active {
+        transform: rotate(0deg) !important;
+    }
+    
+}

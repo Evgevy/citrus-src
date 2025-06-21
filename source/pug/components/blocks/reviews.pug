@@ -1,0 +1,62 @@
+mixin reviews()
+    section.reviews 
+        .container 
+            .reviews__wrapper 
+                .reviews__top
+                    .reviews__titles
+                        h2.reviews__title Отзывы
+                    .reviews__buttons 
+                        .swiper-button-next.reviews__next
+                            +icon('right', 50, 50) 
+                        .swiper-button-prev.reviews__prev
+                            +icon('right', 50, 50) 
+                .reviews__slider.swiper(data-slider="reviews")
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .reviews__top-slide 
+                                .reviews__image
+                                    img(src="img/content/ava.png" alt="Статья")
+                                .reviews__info 
+                                    p.reviews__name Иванов Иван
+                                    span Должность
+                            p.reviews__text Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики , я доволен покупки меня все устроило. Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики , я доволен покупки меня все устроило
+                            
+                        .swiper-slide 
+                            .reviews__top-slide 
+                                .reviews__image
+                                    img(src="img/content/ava.png" alt="Статья")
+                                .reviews__info 
+                                    p.reviews__name Иванов Иван
+                                    span Должность
+                            p.reviews__text Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики , я доволен покупки меня все устроило. Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики , я доволен покупки меня все устроило
+                        .swiper-slide 
+                            .reviews__top-slide 
+                                .reviews__image
+                                    img(src="img/content/ava.png" alt="Статья")
+                                .reviews__info 
+                                    p.reviews__name Иванов Иван
+                                    span Должность
+                            p.reviews__text Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики , я доволен покупки меня все устроило. Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики , я доволен покупки меня все устроило
+                        .swiper-slide 
+                            .reviews__top-slide
+                                .reviews__image
+                                    img(src="img/content/ava.png" alt="Статья")
+                                .reviews__info 
+                                    p.reviews__name Иванов Иван
+                                    span Должность
+                            p.reviews__text Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики , я доволен покупки меня все устроило. Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики , я доволен покупки меня все устроило
+                a(href="#!").reviews__link Смотреть все отзывы
+    <div class="popup-overlay" style="display:none;">
+        <div class="popup">
+            <button class="popup-close" aria-label="Закрыть">×</button>
+            <div class="popup-header">
+            <img src="img/content/ava.png" alt="Аватар" class="popup-avatar" />
+            <div>
+                <p class="popup-name">Иванов Иван</p>
+                <span class="popup-position">Должность</span>
+            </div>
+            </div>
+            <div class="popup-text">Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики, я доволен покупки меня все устроило. Заказал здесь токарку пришла за неделю все отлично все работает советую заказывать здесь, работает как часики, я доволен покупки меня все устроило
+            </div>
+        </div>
+    </div> 

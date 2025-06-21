@@ -1,0 +1,63 @@
+mixin trust()
+    section.trust 
+        .container 
+            .trust__wrapper 
+                .trust__top
+                    .trust__titles
+                        h2.trust__title Про нас пишут
+                    .trust__buttons 
+                        .swiper-button-next.trust__next
+                            +icon('arrow-left', 50, 50) 
+                        .swiper-button-prev.trust__prev
+                            +icon('arrow-left', 50, 50) 
+                .trust__slider.swiper(data-slider="trust")
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .trust__image 
+                                img(src="img/content/trust1.png" alt="Клиент")
+                            .trust__info 
+                                .trust__box
+                                    p.trust__nic @nickname
+                                    img(src="img/content/nic.png" alt="Подтвержден")
+                                p.trust__name Екатерина Бокучава
+                                p.trust__work Ресторатор
+                            a(href="#!").trust__link Подробнее
+                        .swiper-slide 
+                            .trust__image 
+                                img(src="img/content/trust2.png" alt="Клиент")
+                            .trust__info 
+                                .trust__box
+                                    p.trust__nic @nickname
+                                    img(src="img/content/nic.png" alt="Подтвержден")
+                                p.trust__name Артем Балаев
+                                p.trust__work Партнер компании «Агора.Гастроурбанистика»
+                            a(href="#!").trust__link Подробнее
+                        .swiper-slide 
+                            .trust__image 
+                                img(src="img/content/trust3.png" alt="Клиент")
+                            .trust__info 
+                                .trust__box
+                                    p.trust__nic @nickname
+                                    img(src="img/content/nic.png" alt="Подтвержден")
+                                p.trust__name Анастасия Дианова
+                                p.trust__work Кабаре ШУМ
+                            a(href="#!").trust__link Подробнее
+                        .swiper-slide.swiper-slide--empty 
+                            .trust__info 
+                                p.trust__name Более 13 700 пациентов уже доверились нам
+                            a(href="#!").trust__link Читать все истории
+                        .swiper-slide 
+                            .trust__image 
+                                img(src="img/content/trust4.png" alt="Клиент")
+                            .trust__info 
+                                .trust__box
+                                    p.trust__nic @nickname
+                                    img(src="img/content/nic.png" alt="Подтвержден")
+                                p.trust__name Артем Перук
+                                p.trust__work Ресторатор, бартендер
+                            a(href="#!").trust__link Подробнее
+                .trust__buttons-mobile
+                    .swiper-button-next.trust__next
+                        +icon('arrow-left', 50, 50) 
+                    .swiper-button-prev.trust__prev
+                        +icon('arrow-left', 50, 50) 

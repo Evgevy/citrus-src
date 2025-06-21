@@ -1,0 +1,46 @@
+mixin form()
+    section.form 
+       .container 
+        .form__bg 
+            +icon('lemon', 213, 265)
+        .form__bgl 
+            +icon('lemon', 213, 265)
+        .form__wrapper  
+            .form__content 
+                .form__top 
+                    h2.form__title Вступайте <br>в клуб Citrus —
+                    p.form__subtitle ваш доступ в мир <br>точных технологий
+                    p.form__text Оставьте заявку! Проведем виртуальный тур по производству, запишем на тест-драйв оборудования и раскроем участникам секретные бонусы
+                form(method="post")
+                    .form__top-content
+                        +custom-input({
+                
+                            type: "text",
+                            name: "name",
+                            placeholder: "Имя"
+                        })
+                        +custom-input({
+
+                            type: "tel",
+                            name: "phone",
+                            placeholder: "Телефон"
+                        })
+                        +custom-input({
+                            type: "tel",
+                            name: "email",
+                            placeholder: "Почта"
+                        })
+                        button(type="submit").form__btn Отправить
+                    .form__bottom
+                        .form-checkbox
+                            label.form-checkbox__label
+                                input.form-checkbox__input(
+                                type="checkbox"
+                                id="privacy-agreement"
+                                name="privacy_agreement"
+                                required
+                                checked
+                                )
+                                span.form-checkbox__custom
+                                span.form-checkbox__text Нажимая кнопку, я соглашаюсь с <a href="#!" target="_blank"> политикой конфиденциальности</a>
+                    

@@ -1,0 +1,98 @@
+mixin order()
+    .order__bg 
+        img(src="img/content/order-bg.png" alt="Фон" width="1920" height="920")
+    .container 
+        .order__wrapper 
+            h2.order__title Оформление  <span>Заказа</span>
+            p.order__text Перед заполнением формы ознакомьтесь с нашей схемой работы!
+            ul.order__list 
+                li.order__item
+                    +icon('order1', 100, 100)
+                    p.order__item-text Lorem ipsum dolor sit amet
+                    .order__connector
+                        span
+                        span
+                        span
+                        span
+                        span
+                li.order__item
+                    +icon('order2', 100, 100)
+                    p.order__item-text Сonsecteturadipiscing elit
+                    .order__connector
+                        span
+                        span
+                        span
+                        span
+                        span
+                li.order__item
+                    +icon('order3', 100, 100)
+                    p.order__item-text Sed do eiusmod tempor
+                    .order__connector
+                        span
+                        span
+                        span
+                        span
+                        span
+                li.order__item
+                    +icon('order4', 100, 100)
+                    p.order__item-text Esse cillum dolore eu fugiat
+                    .order__connector
+                        span
+                        span
+                        span
+                        span
+                        span
+                li.order__item
+                    +icon('order5', 100, 100)
+                    p.order__item-text Excepteur sint occaecat cupidatat non proident
+            form(method="post")
+                .form__box
+                    +custom-select({
+                            name: "system", 
+                            placeholder: "Выберите тип системы", 
+                            optionsList: [
+                            { value: "option1", text: "Sed ut perspiciatis", isActive: false },
+                            { value: "option2", text: "Nemo enim ipsam", isActive: false },
+                            { value: "option3", text: "Et harum quidem", isActive: false },
+                            { value: "option4", text: "Temporibus autem", isActive: false },
+                            { value: "option5", text: "Itaque earum rerum", isActive: false }
+                            ]
+                        })
+                    +custom-input({
+                        type: "email",
+                        name: "email-adress",
+                        placeholder: "Ваш e-mail"
+                    })
+                    +custom-input({
+                        
+                        type: "text",
+                        name: "name",
+                        placeholder: "Ваше имя"
+                    })
+                .form__box 
+                    .range-slider
+                        .range-slider__top
+                            .range-slider__label Sed ut perspiciatis, unde omnis iste natus
+                            .range-slider__value 0%
+                        input.range-slider__input(
+                            type="range" 
+                            id="range1" 
+                            min="0" 
+                            max="100" 
+                            step="5" 
+                            value="0"
+                        )
+                        .range-slider__progress
+                        
+                    .file-upload
+                        label.file-upload__label(for="file-input")
+                            span.file-upload__text Прикрепить файл
+                            input.file-upload__input(
+                            type="file" 
+                            id="file-input" 
+                            name="attachment"
+                            )
+                        .file-upload__preview
+                            span.file-upload__filename
+                            button.file-upload__remove(type="button") ×
+                button(type="submit").header__btn Отправить

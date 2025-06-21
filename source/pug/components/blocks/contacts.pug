@@ -1,0 +1,39 @@
+mixin contacts()
+    section.contacts 
+        .container
+            .contacts__wrapper 
+                .contacts__titles.titles
+                    h2.contacts__title.title Контакты
+                    +icon('title', 395, 21)
+                .contacts__slider.swiper(data-slider="contacts")  
+                    .swiper-wrapper
+                        .contacts__block.swiper-slide 
+                            h3.contacts__name Номер телефона
+                            .contacts__block-phone 
+                                a(href="tel:+79999999999") 8-999-999-99-99
+                                .contacts__links 
+                                    a(href="#!") Telegram
+                                    a(href="#!") WhatsApp
+                        .contacts__block.swiper-slide 
+                            h3.contacts__name Электронная почта
+                            .contacts__block-email 
+                                a(href="mailto:ShyuViju@gmail.com") ShyuViju@gmail.com
+                        .contacts__block.swiper-slide 
+                            h3.contacts__name Мои работы
+                            .contacts__block-work 
+                                a(href="#!") ShyuViju
+                .contacts__buttons 
+                    .swiper-button-next.contacts__next
+                        +icon('arrow-up', 60, 60) 
+                    .swiper-button-prev.contacts__prev
+                        +icon('arrow-up', 60, 60)
+                .contacts__form 
+                    form(metod="post" data-form="feedback")
+                        .contacts__inputs
+                            .contacts__inputs-inputs
+                                +custom-input({type: "text", name: "name", placeholder: "Как вас зовут?",})
+                                +custom-input({type: "tel", name: "phone", placeholder: "Номер телефона"})
+                                +custom-input({type: "tel", name: "phone", placeholder: "Электронная почта"})
+                            .contacts__inputs-text
+                                +custom-textarea({name: "question", placeholder: "Задайте свой вопрос или предложение"})
+                        button(type="submit").contacts__btn Отправить

@@ -1,0 +1,69 @@
+mixin catalog()
+    section.catalog 
+        .container 
+            .catalog__wrapper 
+                .catalog__titles.titles
+                    h2.catalog__title.title Каталог игрушек
+                    +icon('title', 395, 21)
+                .catalog__slider.swiper(data-slider="catalog")
+                    .swiper-wrapper 
+                        .catalog__slide.swiper-slide
+                            .catalog__top 
+                                .catalog__image 
+                                    img(src="img/content/pig2.webp" alt="Фото игрушки" width="220" height="358")
+                                .catalog__info 
+                                    h3.catalog__name Пятачок
+                                    p.catalog__text Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: социально-экономическое развитие обеспечивает актуальность модели развития! 
+                                    .catalog__param 
+                                        .catalog__bg 
+                                            img(src="img/sprite/ellipse.svg" alt="Задний фон" width="75" height="75")
+                                            p.catalog__material 100% Плюш
+                                        .catalog__bg 
+                                            img(src="img/sprite/ellipse.svg" alt="Задний фон" width="75" height="75")
+                                            p.catalog__size 42см
+                            .catalog__bottom 
+                                button(type="button").catalog__btn Добавить в корзину
+                                    +icon('plus', 30, 30)
+                                a(href="#!").catalog__link Подробнее
+                        .catalog__slide.swiper-slide
+                            .catalog__top 
+                                .catalog__image 
+                                    img(src="img/content/pig2.webp" alt="Фото игрушки" width="220" height="358")
+                                .catalog__info 
+                                    h3.catalog__name Пятачок
+                                    p.catalog__text Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: социально-экономическое развитие обеспечивает актуальность модели развития! Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: социально-экономическое развитие обеспечивает актуальность модели развития!   
+                                    .catalog__param 
+                                        .catalog__bg 
+                                            img(src="img/sprite/ellipse.svg" alt="Задний фон" width="75" height="75")
+                                            p.catalog__material 100% Плюш
+                                        .catalog__bg 
+                                            img(src="img/sprite/ellipse.svg" alt="Задний фон" width="75" height="75")
+                                            p.catalog__size 42см
+                            .catalog__bottom 
+                                button(type="button").catalog__btn Добавить в корзину
+                                    +icon('plus', 30, 30)
+                                a(href="#!").catalog__link Подробнее
+                        .catalog__slide.swiper-slide
+                            .catalog__top 
+                                .catalog__image 
+                                    img(src="img/content/pig2.webp" alt="Фото игрушки" width="220" height="358")
+                                .catalog__info 
+                                    h3.catalog__name Пятачок
+                                    p.catalog__text Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: социально-экономическое развитие обеспечивает актуальность модели развития!
+                                    .catalog__param 
+                                        .catalog__bg 
+                                            img(src="img/sprite/ellipse.svg" alt="Задний фон" width="75" height="75")
+                                            p.catalog__material 100% Плюш
+                                        .catalog__bg 
+                                            img(src="img/sprite/ellipse.svg" alt="Задний фон" width="75" height="75")
+                                            p.catalog__size 42см
+                            .catalog__bottom 
+                                button(type="button").catalog__btn Добавить в корзину
+                                    +icon('plus', 30, 30)
+                                a(href="#!").catalog__link Подробнее
+                .catalog__buttons 
+                    .swiper-button-next.catalog__next
+                        +icon('arrow-up', 60, 60) 
+                    .swiper-button-prev.catalog__prev
+                        +icon('arrow-up', 60, 60)
+                a(href="#!").catalog__more Посмотреть весь каталог

@@ -1,0 +1,88 @@
+mixin team()
+    section.team 
+        .container 
+            .team__wrapper 
+                .team__top
+                    h2.team__title Познакомьтесь <br>с нашей командой
+                    .team__buttons 
+                        .swiper-button-next.team__next
+                            +icon('arrow-left', 50, 50) 
+                        .swiper-button-prev.team__prev
+                            +icon('arrow-left', 50, 50) 
+                .team__slider.swiper(data-slider="team")
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .team__image-block
+                                .team__image 
+                                    img(src="img/content/team1.png" alt="Врач")
+                                    .team__bg 
+                            .team__info 
+                                span.team__previs Основатель
+                                span.team__prev-mobile Главный врач
+                                h3.team__name <span>Скляров</span> <br>Илья Александрович
+                                p.team__time Стаж работы 26 лет в клинике
+                                p.team__work Стоматолог-ортодонт
+                                p.team__text Ведущий врач, кандидат медицинских наук и основатель <br>SmileClinic. Лучший стоматолог-ортопед России по версии STARTSMILE и Forbes (2024). <br><br>На протяжении 26 лет специализируется на реабилитации всей полости рта, построении идеальной улыбки при помощи виниров, коронок и имплантов. Решает самые сложные клинические ситуации. Главный принцип работы - максимальный результат за минимальное время.
+                            button(type="button").team__btn Записаться на прием
+                            butoon(type="button").team__btn-mobile записаться на консультацию
+                        .swiper-slide
+                            .team__image-block 
+                                .team__image 
+                                    img(src="img/content/team2.png" alt="Врач")
+                                    .team__bg 
+                            .team__info 
+                                span.team__previs Основатель
+                                span.team__prev-mobile Главный врач
+                                h3.team__name <span>Кушнир</span> <br>Маргарита Исааковна  
+                                p.team__time Стаж работы 24 года в клинике
+                                p.team__work Стоматолог-ортодонт
+                                p.team__text Мне очень нравится передавать свои знания молодым докторам. Удивляет их смелость. Я могу теперь лечить не только своими руками, а просто помогая новым специалистам своими знаниями. Лишь веду их, слегка помогаю, а они приобретают уверенность. <br><br>Основатель SmileClinic и одна из самых известных ортодонтов Санкт-Петербурга. Но это не мешает ей постоянно совершенствовать свои знания и навыки, чтобы делать улыбки своих пациентов еще красивее.
+                            button(type="button").team__btn Записаться на прием
+                            butoon(type="button").team__btn-mobile записаться на консультацию
+                        .swiper-slide 
+                            .team__image-block
+                                .team__image 
+                                    img(src="img/content/team3.png" alt="Врач")
+                                    .team__bg 
+                            .team__info 
+                                span.team__previs Врач
+                                span.team__prev-mobile Врач
+                                h3.team__name <span>Щитов</span> <br>Андрей Дмитриевич
+                                p.team__time Стаж работы более 15 лет
+                                p.team__work Стоматолог-ортодонт
+                                p.team__text Специализируется на всех видах протезирования, в особенности <br>на создании красивых улыбок с помощью виниров.
+                            button(type="button").team__btn Записаться на прием
+                            butoon(type="button").team__btn-mobile записаться на консультацию
+                        .swiper-slide 
+                            .team__image-block
+                                .team__image 
+                                    img(src="img/content/team4.png" alt="Врач")
+                                    .team__bg 
+                            .team__info 
+                                span.team__previs Врач
+                                span.team__prev-mobile Врач
+                                h3.team__name <span>Прокофьева</span> <br>Софья сергеевна
+                                p.team__time Стаж работы более 15 лет
+                                p.team__work Стоматолог-ортодонт, стоматолог-пародонтолог
+                                p.team__text Специализируется  на ортодонтии и пародонтологии
+                            button(type="button").team__btn Записаться на прием
+                            butoon(type="button").team__btn-mobile записаться на консультацию
+                        .swiper-slide 
+                            .team__image-block
+                                .team__image 
+                                    img(src="img/content/team5.png" alt="Врач")
+                                    .team__bg 
+                            .team__info 
+                                span.team__previs 
+                                span.team__prev-mobile 
+                                h3.team__name Мы учим новых врачей в собственном центре обучения
+                                p.team__time 
+                                p.team__work 
+                                p.team__text 
+                            button(type="button").team__btn Перейти на сайт учебного центра
+                            butoon(type="button").team__btn-mobile Перейти на сайт учебного центра
+                .team__buttons-mobile
+                    .swiper-button-next.team__next
+                        +icon('arrow-left', 50, 50) 
+                    .swiper-button-prev.team__prev
+                        +icon('arrow-left', 50, 50) 

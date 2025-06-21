@@ -1,0 +1,54 @@
+mixin tools()
+    section.tools   
+        .container 
+            .tools__wrapper 
+                .tools__top
+                    .tools__titles
+                        h2.tools__title Станки на складе
+                        p.tools__text или с коротким сроком поставки
+                    .tools__buttons 
+                        .swiper-button-next.tools__next
+                            +icon('right', 50, 50) 
+                        .swiper-button-prev.tools__prev
+                            +icon('right', 50, 50) 
+                .tools__slider.swiper(data-slider="tools")
+                    .swiper-wrapper
+                       
+
+                            <div class="swiper-slide slide-dark">
+                                <div class="slide-content">
+                                    <div class="slide-tag">Токарный станок</div>
+                                    <h3 class="slide-title">Speed T 40/300</h3>
+                                    <p class="slide-desc">Для работы с прутком диаметром до 40 мм.<br>Подходит для обработки цветных металлов, стали<br>и нержавейки.
+                                    </p>
+                                    <a href="#" class="slide-link">Выбрать станок</a>
+                                </div>
+                                <div class="slide-image">
+                                    <img src="img/content/intro2.png" alt="Speed T 40/300" />
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide slide-white">
+                                <div class="slide-content">
+                                    <div class="slide-tag">Фрезерный центр</div>
+                                    <h3 class="slide-title">VMC 2000 (M)</h3>
+                                    <p class="slide-desc">Рабочее поле: 2000×700×600 мм<br>Точно режет цветные металлы, сталь и нержавейку.</p>
+                                    <a href="#" class="slide-link">Выбрать станок</a>
+                                </div>
+                                <div class="slide-image">
+                                    <img src="img/content/tools1.png" alt="VMC 2000 (M)" />
+                                </div>
+                            </div>
+
+                             <div class="swiper-slide slide-green">
+                                <div class="slide-content">
+                                    <div class="slide-tag">Комбинированный станок</div>
+                                    <h3 class="slide-title">Smart M 12/300 K</h3>
+                                    <p class="slide-desc">Токарно-фрезерный в одном корпусе<br>Для прутка до 12 мм. Универсальное решение<br>для цветных металлов и стали.</p>
+                                    <a href="#" class="slide-link">Выбрать станок</a>
+                                </div>
+                                <div class="slide-image">
+                                    <img src="img/content/tools2.png" alt="Smart M 12/300 K" />
+                                </div>
+                            </div>
+                            

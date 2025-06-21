@@ -1,0 +1,296 @@
+.story {
+    overflow: hidden;
+
+    &__wrapper {
+        padding: 50px 0;
+
+        @include vp-767 {
+            padding: 30px 0;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @include vp-767 {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: rgba(26, 25, 25, 1);
+        margin: 0 0 24px;
+
+        @include vp-767 {
+            display: none;
+        }
+    }
+
+    &__title-mobile {
+        display: none;
+
+        @include vp-767 {
+            display: block;
+            font-family: Gotham Pro;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(26, 25, 25, 1);
+            margin: 0 0 10px;
+        }
+    }
+
+    &__text {
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 145%;
+        letter-spacing: 0%;
+        color: rgba(26, 25, 25, 1);
+        margin: 0;
+        max-width: 630px;
+
+        @include vp-767 {
+            color: rgba(116, 116, 116, 1);
+        }
+    }
+
+    &__buttons {
+        align-self: flex-end;
+        position: static;
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 120px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        @include vp-767 {
+            display: none;
+        }
+    }
+
+    &__buttons-mobile {
+        display: none;
+
+        @include vp-767 {
+            display: flex;
+            position: static;
+            flex-direction: row-reverse;
+            max-width: 120px;
+            width: 100%;
+            gap: 10px;
+            justify-content: start;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        margin: 0;
+        flex-shrink: 0;
+        &::after {
+            display: none;
+        }
+    
+        width: 50px;
+        height: 50px;
+        transition: .3s;
+        svg {
+          transition: .3s;
+        }
+
+        &:hover {
+           opacity: 0.7;
+        }
+
+        @include vp-767 {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
+    .swiper-button-next {
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__slider.swiper {
+        width: 100%;
+        height: 100%;
+        overflow-x: visible;
+        display: flex;
+
+        @include vp-767 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .swiper-wrapper {
+        height: auto;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-width: 512px;
+
+        @include vp-767 {
+            max-width: 400px;
+        }
+
+        @media screen and (max-width: 500px) {
+            max-width: 320px;
+        }
+
+        @media screen and (max-width: 350px) {
+            max-width: 290px;
+        }
+    }
+
+
+
+    &__images {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__image {
+        width: 510px;
+        height: 340px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            position: absolute;
+            bottom: 20px;
+            right: 133px;
+            font-family: Gotham Pro;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 145%;
+            letter-spacing: 0%;
+            color: rgba(255, 255, 255, 1);
+            margin: 0;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 10px 20px;
+            display: block;
+
+            @include vp-767 {
+                right: 70px;
+            }
+
+            @media screen and (max-width: 500px) {
+                right: 40px;
+            }
+        }
+
+        @include vp-767 {
+            width: 400px;
+            height: 250px;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 320px;
+            height: 200px;
+        }
+
+        @media screen and (max-width: 350px) {
+            width: 290px;
+            height: 180px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        bottom: 20px;
+        left: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-family: Gotham Pro;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 145%;
+            letter-spacing: 0%;
+            color: rgba(255, 255, 255, 1);
+            margin: 0;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 10px 20px;
+            display: block;
+        }
+
+        @include vp-767 {
+            width: 150px;
+            height: 150px;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 130px;
+            height: 130px;
+        }
+
+        @media screen and (max-width: 350px) {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    &__name {
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 145%;
+        letter-spacing: 1.6px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: rgba(26, 25, 25, 1);
+        margin: 0 0 16px;
+    }
+
+    &__link {
+        width: max-content;
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: rgba(26, 25, 25, 1);
+        border-bottom: 1px solid rgba(26, 25, 25, 1);
+        padding-bottom: 5px;
+        transition: .3s;
+    }
+
+    &__link:hover {
+        opacity: 0.8;
+    }
+
+}

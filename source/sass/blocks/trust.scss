@@ -1,0 +1,212 @@
+.trust {
+    overflow: hidden;
+
+    &__wrapper {
+        padding: 50px 0;
+
+        @include vp-767 {
+            padding: 30px 0;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @include vp-767 {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: rgba(26, 25, 25, 1);
+        margin: 0px;
+
+        @include vp-767 {
+            font-size: 20px;
+        }
+    }
+
+    &__buttons {
+        align-self: flex-end;
+        position: static;
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 120px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        @include vp-767 {
+            display: none;
+        }
+    }
+
+    &__buttons-mobile {
+        display: none;
+
+        @include vp-767 {
+            display: flex;
+            position: static;
+            flex-direction: row-reverse;
+            max-width: 120px;
+            width: 100%;
+            gap: 10px;
+            justify-content: start;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        margin: 0;
+        flex-shrink: 0;
+        &::after {
+            display: none;
+        }
+    
+        width: 50px;
+        height: 50px;
+        transition: .3s;
+        svg {
+          transition: .3s;
+        }
+
+        &:hover {
+           opacity: 0.7;
+        }
+
+        @include vp-767 {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
+    .swiper-button-next {
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__slider.swiper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow-x: visible;
+        @include vp-767 {
+            
+            margin-bottom: 30px;
+        }
+    }
+
+    .swiper-wrapper {
+        height: auto;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-width: 290px;
+        padding-bottom: 20px;
+        &--empty {
+            background: rgba(250, 250, 250, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 20px;
+            
+        }
+    }
+
+    &__image {
+        width: 290px;
+        height: 340px;
+        margin-bottom: 24px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__box {
+        display: flex;
+        margin-bottom: 16px;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 10px;
+            height: 11px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+    }
+
+    &__nic {
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 1px;
+        vertical-align: middle;
+        color: rgba(0, 0, 0, 1);
+        margin: 0px;
+    }
+
+    &__name {
+        font-family: Gotham Pro;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 145%;
+        letter-spacing: 1.6px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: rgba(26, 25, 25, 1);
+        margin: 0 0 10px;
+    }
+
+    &__work {
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        color: rgba(116, 116, 116, 1);
+        margin: 0 0 15px;
+    }
+
+    &__link {
+        width: max-content;
+        font-family: Gotham Pro;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: rgba(26, 25, 25, 1);
+        border-bottom: 1px solid rgba(26, 25, 25, 1);
+        padding-bottom: 5px;
+        margin-top: auto;
+        transition: .3s;
+
+        @media screen and (max-width: 500px) {
+            font-size: 12px;
+         }
+    }
+
+    &__link:hover {
+        opacity: 0.7;
+    }
+
+}

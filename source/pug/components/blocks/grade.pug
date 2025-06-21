@@ -1,0 +1,51 @@
+mixin grade()
+    section.grade 
+        .container 
+            .grade__wrapper 
+                <div class="container-title"><span class="position-absolute">Оценки</span>
+                    <div class="container-small">Независимый рейтинг клиники</div>
+                    p.podcast__text Мы уверены в наших врачах, и это подтверждают независимые рейтинги
+                </div>
+                .grade__slider.swiper(data-slider="grade")
+                    .swiper-wrapper
+                        .swiper-slide 
+                            a(href="#!")
+                                .grade__logo 
+                                    img(src="img/content/grade1.png" alt="Логотоп")
+                                p.grade__name Напоправку.ру
+                                p.grade__email napopravku.ru
+                                .grade__box 
+                                    p.grade__box-text Рейтинг
+                                    p.grade__num <span>4.7</span>/5
+                        .swiper-slide 
+                            a(href="#!")
+                                .grade__logo 
+                                    img(src="img/content/grade2.png" alt="Логотоп")
+                                p.grade__name Яндекс
+                                p.grade__email www.yandex.ru
+                                .grade__box 
+                                    p.grade__box-text Рейтинг
+                                    p.grade__num <span>5.0</span>/5
+                        .swiper-slide 
+                            a(href="#!")
+                                .grade__logo 
+                                    img(src="img/content/grade3.png" alt="Логотоп")
+                                p.grade__name Google
+                                p.grade__email www.google.com
+                                .grade__box 
+                                    p.grade__box-text Рейтинг
+                                    p.grade__num <span>4.8</span>/5
+                        .swiper-slide 
+                            a(href="#!")
+                                .grade__logo 
+                                    img(src="img/content/grade4.png" alt="Логотоп")
+                                p.grade__name Zoon
+                                p.grade__email www.zoon.ru
+                                .grade__box 
+                                    p.grade__box-text Рейтинг
+                                    p.grade__num <span>4.5</span>/5
+                .grade__buttons
+                    .swiper-button-next.grade__next
+                        +icon('arrow-left', 50, 50) 
+                    .swiper-button-prev.grade__prev
+                        +icon('arrow-left', 50, 50) 
