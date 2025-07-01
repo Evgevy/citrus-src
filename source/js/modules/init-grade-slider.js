@@ -1,89 +1,63 @@
-const slider = document.querySelector('[data-slider="card"]');
-let swiper1 = null;
+// let caroSlider1 = null;
+// const BREAKPOINT = 1120;
 
 const initGradeSlider = () => {
-  if (!slider) return;
+  // if (caroSlider1 || window.innerWidth >= BREAKPOINT) return;
 
-  
-  const handleResize = () => {
-    if (window.innerWidth <= 1120) {
-      if (!swiper1) {
-        swiper1 = new Swiper(slider, {
-          slidesPerView: 3, 
-          initialSlide: 1,
-          centeredSlides: true,
-          spaceBetween: 0,
-          grabCursor: true,
+  // const sliderContainer1 = document.querySelector('.card__slider');
+  // if (!sliderContainer1) return;
 
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-          },
-          effect: 'coverflow',
-          coverflowEffect: {
-            rotate: 0,       
-          },
-    // navigation: {
-    //   nextEl: '.swiper-button-next.intro__next',
-    //   prevEl: '.swiper-button-prev.intro__prev',
-    // },
-          breakpoints: {
-            320: {
-              slidesPerView: 1,
-            },
-            450: {
-              slidesPerView: 1.3,
-            },
-            550: {
-              slidesPerView: 1.5,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            }
-          },
-          on: {
-            slideChange: function () {
-              
-              const slides = this.slides;
-              const activeSlide = slides[this.activeIndex];
-              
-              const slideDark = document.querySelector('.slide-dark1')
-              const slideGreen = document.querySelector('.slide-green1');
-              const slideWhite = document.querySelector('.slide-white1');
-              
-              if (activeSlide.classList.contains('slide-dark1')) {
-                slideDark.style.opacity = '1';
-                slideGreen.style.opacity = '0';
-              } else if (activeSlide.classList.contains('slide-green1')) {
-                slideDark.style.opacity = '0';
-                slideGreen.style.opacity = '1';
-              } else {
-                slideGreen.style.opacity = '1';
-                slideWhite.style.opacity = '1';
-                slideDark.style.opacity = '1';
-              }
-        
-                
-              
-            }
-          }
-          
-        });
-      }
-    } else {
-      if (swiper1) {
-        swiper1.destroy(true, true);
-        swiper1 = null;
-      }
-    }
-  };
+  // // Инициализация слайдера с плавным переходом
+  // caroSlider1 = new MicroSlider(sliderContainer1, {
+  //   indicators: true,
+  //   indicatorText: '',
+  //   transitionDuration: 300,
+  //   easing: 'ease-in-out'
+  // });
 
-  handleResize();
+  // // Инициализация Hammer.js для свайпов
+  // const hammer = new Hammer(sliderContainer1);
+  // hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 1, velocity: 0.05 });
 
-  window.addEventListener('resize', handleResize);
+  // hammer.on('swipeleft', () => {
+  //   caroSlider1.next();
+  //   //console.log('swipe left — next slide');
+  // });
+
+  // hammer.on('swiperight', () => {
+  //   caroSlider1.prev();
+  //   //console.log('swipe right — previous slide');
+  // });
+
+  // Если не нужно останавливать автоплей (его нет), обработчики клика/тапа можно убрать
+  // Но если хотите, например, для будущих целей, можно оставить:
+  // sliderContainer1.addEventListener('click', () => {/* можно добавить логику */});
+  // hammer.on('tap', () => {/* можно добавить логику */});
 };
+
+// const destroyGradeSlider = () => {
+//   if (!caroSlider1) return;
+
+//   if (typeof caroSlider1.destroy === 'function') {
+//     caroSlider1.destroy();
+//   }
+//   caroSlider1 = null;
+// };
+
+// const checkGradeSlider = () => {
+//   if (window.innerWidth < BREAKPOINT) {
+//     initGradeSlider();
+//   } else {
+//     destroyGradeSlider();
+//   }
+// };
+
+// let resizeTimeout;
+// window.addEventListener('resize', () => {
+//   clearTimeout(resizeTimeout);
+//   resizeTimeout = setTimeout(checkGradeSlider, 100);
+// });
+
+// document.addEventListener('DOMContentLoaded', checkGradeSlider);
 
 export { initGradeSlider };

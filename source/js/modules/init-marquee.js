@@ -9,7 +9,7 @@ const initMarquee = () => {
 
     const contentWidth = marqueeContent.scrollWidth / 2; 
     
-    marqueeContent.style.animation = `marquee ${contentWidth / 100}s linear infinite`;
+    marqueeContent.style.animation = `marquee ${contentWidth / 50}s linear infinite`;
     
     marqueeContent.style.willChange = 'transform';
 };

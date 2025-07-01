@@ -25,6 +25,8 @@
 
         @media screen and (max-width: 500px) {
             top: 240px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
@@ -141,19 +143,30 @@
         }
     }
       
-    &__slider.swiper {
-        width: 100%;
-        overflow: visible;
+    &__slider {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -55vw;
+        margin-right: -55vw;
         margin-bottom: -55px;
+        overflow: visible;
     }
 
-    .swiper-wrapper {
-        height: auto;
+    .tape__slider-content {
+        display: flex;
+        will-change: transform;
+        position: relative;
+        z-index: 1;
+        backface-visibility: hidden; 
+        transform-style: preserve-3d;
     }
 
     .swiper-slide {
         max-width: 500px;
         height: 300px;
+        flex: 0 0 auto;
 
         .tape-image {
             width: 100%;

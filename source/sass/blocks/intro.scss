@@ -15,7 +15,7 @@
         flex-direction: column;
         align-items: center;
         gap: 21px;
-        margin-bottom: 42px;
+        
     }
 
     &__span {
@@ -88,6 +88,7 @@
         border-radius: 8px;
         display: inline;
         text-align: center;
+        margin-bottom: 20px;
         transition: .3s;
     }
 
@@ -96,45 +97,48 @@
     }
 
 
-
-    
-    &__slider-wrapper {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto -10px;
-        overflow-x: visible;
-    }
-
     .intro__slider {
-        width: 100%; 
-        height: 540px; 
-        overflow-x: visible;
-    }
-    
-    
-    .swiper-slide {
-        border-radius: 32px 32px 0 0;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 40px 24px 0px;
-        position: relative;
-        overflow: hidden;
-        color: #000;
-        user-select: none;
+        width: 850px;
+        margin-bottom: -80px;
 
-        @include vp-767 {
-            padding: 24px 16px 0;
+        @media screen and (max-width: 850px) {
+            width: 100%;
+            overflow-x: visible;
         }
     }
+    
+
+    .slider-wrapper {
+       height: auto;
+    }
+
+    .swiper-slide {
+        position: relative;
+        height: 550px;
+        text-align: center;
+        aspect-ratio: 3/4;
+        width: 420px;
+        overflow: hidden;
+        border-radius: 32px;
+        padding: 30px;
+        touch-action: pan-y;
+        @media screen and (max-width: 500px) {
+            width: 320px;
+        }
+    }
+
+    .slide-image {
+        user-select: none;
+        pointer-events: none;
+    }
+
     
     
     .slide-green {
         background: linear-gradient(144.1deg, #B7FF6A 1.45%, #CDEB69 85.52%);
-        position: relative;
-
-         
+        // position: relative;
+        // transition: .3s;
+         z-index: -1 !important;
         .slide-tag {
             font-family: SF Pro Display;
             font-weight: 600;
@@ -154,7 +158,290 @@
         .slide-title {
             font-family: SF Pro Display;
             font-weight: 600;
-            font-size: 48px;
+            font-size: 44px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(20, 21, 17, 1);
+            margin: 0 0 24px;
+
+            @media screen and (max-width: 1150px) {
+                font-size: 40px;
+            }
+
+            @include vp-767 {
+                font-size: 32px
+            }
+        }
+
+        .slide-desc {
+            font-family: SF Pro Display;
+            font-weight: 400;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 130%;
+            letter-spacing: -2%;
+            text-align: center;
+            color: rgba(20, 21, 17, 0.5);
+            margin: 0 0 32px;
+
+            @include vp-767 {
+                font-size: 16px;
+            }
+        }
+
+        .slide-link {
+            font-family: SF Pro Display;
+            font-weight: 500;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            text-decoration-skip-ink: auto;
+            color: rgba(20, 21, 17, 1);
+            text-align: center;
+            transition: .3s;
+        }
+
+        .slide-link:hover {
+            opacity: 0.7;
+            
+        }
+
+        .slide-image {
+            width: 400px;
+            height: 250px;
+            position: relative;
+            bottom: -50px;
+            transform: rotate(5deg);
+            pointer-events: none;
+            user-select: none;
+            z-index: -1;
+            transition: .3s;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                pointer-events: none;
+                user-select: none;
+            }
+        }
+    }
+
+    .slide-green::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(124, 181, 78, 1);
+        top: 40px;
+        left: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            left: 16px;
+        }
+    }
+
+    .slide-green::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(124, 181, 78, 1);
+        top: 40px;
+        right: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            right: 16px;
+        }
+    }
+
+    .swiper-slide.slide-green.active {
+        .slide-image {
+            bottom: -10px;
+            transform: scale(1.1) rotate(5deg);
+        }
+    }
+
+    // .slide-green.swiper-slide-active {
+    //     .slide-image {
+    //         bottom: -20px;
+    //     }
+    // }
+
+    .slide-dark {
+        background: linear-gradient(139.42deg, #252525 2.23%, #5C5C5C 97.41%);
+        // position: relative;
+        
+        .slide-tag {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 14px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(251, 251, 251, 0.5);
+            margin: 0 auto 24px;
+            background: rgba(20, 21, 17, 0.4);
+            max-width: 220px;
+            padding: 8px 16px;
+            border-radius: 100px;
+        }
+
+        .slide-title {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 45px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: rgba(251, 251, 251, 1);
+            margin: 0 0 24px;
+
+            @media screen and (max-width: 1150px) {
+                font-size: 40px;
+            }
+
+            @include vp-767 {
+                font-size: 32px
+            }
+        }
+
+        .slide-desc {
+            font-family: SF Pro Display;
+            font-weight: 400;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 130%;
+            letter-spacing: -2%;
+            text-align: center;
+            color: rgba(251, 251, 251, 0.5);
+            margin: 0 0 32px;
+
+            @include vp-767 {
+                font-size: 16px;
+            }
+        }
+
+        .slide-link {
+            font-family: SF Pro Display;
+            font-weight: 500;
+            font-size: 17px;
+            leading-trim: Cap height;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            text-decoration-skip-ink: auto;
+            color: rgba(251, 251, 251, 1);
+            text-align: center;
+            transition: .3s;
+        }
+
+        .slide-link:hover {
+            opacity: 0.7;
+            
+        }
+
+        .slide-image {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            bottom: 70px;
+            left: -30px;
+            pointer-events: none;
+            transition: .3s;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                pointer-events: none;
+                user-select: none;
+            }
+        }
+    }
+
+    .slide-dark::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(20, 21, 17, 0.5);
+        top: 40px;
+        left: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            left: 16px;
+        }
+    }
+
+    .slide-dark::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(20, 21, 17, 0.5);
+        top: 40px;
+        right: 40px;
+
+        @include vp-767 {
+            top: 34px;
+            right: 16px;
+        }
+    }
+
+    .swiper-slide.slide-dark.active {
+        .slide-image {
+            width: 110%;
+            height: 70%;
+            bottom: 30px;
+            left: -30px;
+        }
+    }
+
+    .slide-white {
+        background: linear-gradient(149.22deg, #F0F0F0 40.88%, #E3E3E3 86.7%);
+        // position: relative;
+
+
+        .slide-tag {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 14px;
+            leading-trim: Cap height;
+            line-height: 100%;
+            letter-spacing: -3%;
+            text-align: center;
+            color: #FBFBFB;
+            margin: 0 auto 24px;
+            background: rgba(20, 21, 17, 0.2);
+            max-width: 220px;
+            padding: 8px 16px;
+            border-radius: 100px;
+            position: relative;
+            z-index: 11;
+        }
+
+        .slide-title {
+            font-family: SF Pro Display;
+            font-weight: 600;
+            font-size: 45px;
             leading-trim: Cap height;
             line-height: 100%;
             letter-spacing: -3%;
@@ -211,272 +498,19 @@
 
         .slide-image {
             width: 450px;
-            height: 450px;
+            height: 350px;
             position: relative;
-            bottom: 40px;
-            transform: rotate(5deg);
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-        }
-    }
-
-    .slide-green::before {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: rgba(124, 181, 78, 1);
-        top: 50px;
-        left: 40px;
-
-        @include vp-767 {
-            top: 34px;
-            left: 16px;
-        }
-    }
-
-    .slide-green::after {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: rgba(124, 181, 78, 1);
-        top: 50px;
-        right: 40px;
-
-        @include vp-767 {
-            top: 34px;
-            right: 16px;
-        }
-    }
-
-    .slide-green.swiper-slide-active {
-        .slide-image {
-            bottom: -20px;
-        }
-    }
-
-    .slide-dark {
-        background: linear-gradient(139.42deg, #252525 2.23%, #5C5C5C 97.41%);
-        position: relative;
-        
-        .slide-tag {
-            font-family: SF Pro Display;
-            font-weight: 600;
-            font-size: 14px;
-            leading-trim: Cap height;
-            line-height: 100%;
-            letter-spacing: -3%;
-            text-align: center;
-            color: rgba(251, 251, 251, 0.5);
-            margin: 0 auto 24px;
-            background: rgba(20, 21, 17, 0.4);
-            max-width: 220px;
-            padding: 8px 16px;
-            border-radius: 100px;
-        }
-
-        .slide-title {
-            font-family: SF Pro Display;
-            font-weight: 600;
-            font-size: 48px;
-            leading-trim: Cap height;
-            line-height: 100%;
-            letter-spacing: -3%;
-            text-align: center;
-            color: rgba(251, 251, 251, 1);
-            margin: 0 0 24px;
-
-            @media screen and (max-width: 1150px) {
-                font-size: 40px;
-            }
-
-            @include vp-767 {
-                font-size: 32px
-            }
-        }
-
-        .slide-desc {
-            font-family: SF Pro Display;
-            font-weight: 400;
-            font-size: 17px;
-            leading-trim: Cap height;
-            line-height: 130%;
-            letter-spacing: -2%;
-            text-align: center;
-            color: rgba(251, 251, 251, 0.5);
-            margin: 0 0 32px;
-
-            @include vp-767 {
-                font-size: 16px;
-            }
-        }
-
-        .slide-link {
-            font-family: SF Pro Display;
-            font-weight: 500;
-            font-size: 17px;
-            leading-trim: Cap height;
-            line-height: 120%;
-            letter-spacing: 0%;
-            text-decoration: underline;
-            text-decoration-style: solid;
-            text-decoration-offset: 0%;
-            text-decoration-thickness: 0%;
-            text-decoration-skip-ink: auto;
-            color: rgba(251, 251, 251, 1);
-            text-align: center;
-            transition: .3s;
-        }
-
-        .slide-link:hover {
-            opacity: 0.7;
-            
-        }
-
-        .slide-image {
-            width: 490px;
-            height: 300px;
-            position: relative;
-            bottom: -10px;
-            left: -35px;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-        }
-    }
-
-    .slide-dark::before {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: rgba(20, 21, 17, 0.5);
-        top: 50px;
-        left: 40px;
-
-        @include vp-767 {
-            top: 34px;
-            left: 16px;
-        }
-    }
-
-    .slide-dark::after {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: rgba(20, 21, 17, 0.5);
-        top: 50px;
-        right: 40px;
-
-        @include vp-767 {
-            top: 34px;
-            right: 16px;
-        }
-    }
-
-    .slide-white {
-        background: linear-gradient(149.22deg, #F0F0F0 40.88%, #E3E3E3 86.7%);
-        position: relative;
-
-
-        .slide-tag {
-            font-family: SF Pro Display;
-            font-weight: 600;
-            font-size: 14px;
-            leading-trim: Cap height;
-            line-height: 100%;
-            letter-spacing: -3%;
-            text-align: center;
-            color: #FBFBFB;
-            margin: 0 auto 24px;
-            background: rgba(20, 21, 17, 0.2);
-            max-width: 220px;
-            padding: 8px 16px;
-            border-radius: 100px;
-            position: relative;
-            z-index: 11;
-        }
-
-        .slide-title {
-            font-family: SF Pro Display;
-            font-weight: 600;
-            font-size: 48px;
-            leading-trim: Cap height;
-            line-height: 100%;
-            letter-spacing: -3%;
-            text-align: center;
-            color: rgba(20, 21, 17, 1);
-            margin: 0 0 24px;
-
-            @media screen and (max-width: 1150px) {
-                font-size: 40px;
-            }
-
-            @include vp-767 {
-                font-size: 32px
-            }
-        }
-
-        .slide-desc {
-            font-family: SF Pro Display;
-            font-weight: 400;
-            font-size: 17px;
-            leading-trim: Cap height;
-            line-height: 130%;
-            letter-spacing: -2%;
-            text-align: center;
-            color: rgba(20, 21, 17, 0.5);
-            margin: 0 0 32px;
-
-            @include vp-767 {
-                font-size: 16px;
-            }
-        }
-
-        .slide-link {
-            font-family: SF Pro Display;
-            font-weight: 500;
-            font-size: 17px;
-            leading-trim: Cap height;
-            line-height: 120%;
-            letter-spacing: 0%;
-            text-decoration: underline;
-            text-decoration-style: solid;
-            text-decoration-offset: 0%;
-            text-decoration-thickness: 0%;
-            text-decoration-skip-ink: auto;
-            color: rgba(20, 21, 17, 1);
-            text-align: center;
-            transition: .3s;
-        }
-
-        .slide-link:hover {
-            opacity: 0.7;
-            
-        }
-
-        .slide-image {
-            width: 490px;
-            height: 300px;
-            position: relative;
-            bottom: 45px;
-            left: -35px;
+            bottom: 0px;
+            left: -75px;
             transform: rotate(-5deg);
+            pointer-events: none;
+            transition: .3s;
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
+                pointer-events: none;
+                user-select: none;
             }
         }
     }
@@ -488,7 +522,7 @@
         height: 8px;
         border-radius: 50%;
         background: rgba(197, 197, 196, 1);
-        top: 50px;
+        top: 40px;
         left: 40px;
 
         @include vp-767 {
@@ -504,7 +538,7 @@
         height: 8px;
         border-radius: 50%;
         background: rgba(197, 197, 196, 1);
-        top: 50px;
+        top: 40px;
         right: 40px;
 
         @include vp-767 {
@@ -513,9 +547,10 @@
         }
     }
 
-    .slide-white.swiper-slide-active {
+    .swiper-slide.slide-white.active {
         .slide-image {
-            bottom: -40px;
+            bottom: 45px;
+            transform: scale(1.1) rotate(-5deg);
         }
     }
     
@@ -524,73 +559,60 @@
         height: 100%;
         object-fit: cover;
     }
-    
-    
-    .swiper-slide-prev {
-        transform: translateY(62px) rotate(-5deg) !important;
-    }
-    
-    .swiper-slide-next {
-        transform: translateY(62px) rotate(5deg) !important;
-    }
-    
-    .swiper-slide-active {
-        transform: rotate(0deg) !important;
+
+    .rotate-wrapper {
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      
+    .slide-white.rotate-tilt .rotate-wrapper {
+        transform: rotate(-11deg);
     }
     
 
     &__buttons {
         position: absolute;
-        bottom: -5px;
+        top: 77%;
         left: 50%;
         padding: 4px;
         display: none;
         flex-direction: row-reverse;
-        max-width: 85px;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
         width: 100%;
         transform: translateX(-50%);
         align-items: center;
-        gap: 4px;
-        align-self: flex-end;
+        
         border-radius: 12px;
-        background: rgba(251, 251, 251, 1);
+        
         @include vp-389 {
             display: flex;
+        }
+
+        .Carousel-prev,
+        .Carousel-next {
+        
+            width: 40px;
+            height: 40px;
+            transition: .3s;
+            svg {
+                width: 40px;
+                height: 40px;
+                transition: .3s;
+            }
+
+           
+
+        }
+        
+        .Carousel-prev {
+            transform: rotate(180deg);
         }
         
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        position: static;
-        margin: 0;
-        flex-shrink: 0;
-        &::after {
-            display: none;
-        }
     
-        width: 40px;
-        height: 40px;
-        transition: .3s;
-        svg {
-          transition: .3s;
-        }
-
-        &:hover {
-           opacity: 0.7;
-        }
-
-        @include vp-767 {
-            width: 36px;
-            height: 36px;
-        }
-    }
-    
-    .swiper-button-next {
-        svg {
-            transform: rotate(-180deg);
-        }
-    }
 
     // .b {
     //     transform: translate3d(-130px, 200px, -220px) rotateX(-25deg) rotateY(50deg) scale(1);

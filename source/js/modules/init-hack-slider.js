@@ -9,6 +9,8 @@ const initHackSlider = () => {
         slidesPerView: 'auto',
         spaceBetween: 8,
         grabCursor: true,
+        speed: 1000,
+        loop: true,
         navigation: {
         nextEl: '.swiper-button-next.hack__next',
         prevEl: '.swiper-button-prev.hack__prev',

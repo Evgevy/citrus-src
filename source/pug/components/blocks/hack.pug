@@ -5,13 +5,25 @@ mixin hack()
                 .hack__top
                     .hack__titles
                         h2.hack__title Технологические <br>лайфхаки
-                    .hack__buttons 
-                        .swiper-button-next.hack__next
-                            +icon('right', 50, 50) 
-                        .swiper-button-prev.hack__prev
-                            +icon('right', 50, 50) 
+                    //- .hack__buttons 
+                    //-     .swiper-button-next.hack__next
+                    //-         +icon('right', 50, 50) 
+                    //-     .swiper-button-prev.hack__prev
+                    //-         +icon('right', 50, 50) 
                 .hack__slider.swiper(data-slider="hack")
                     .swiper-wrapper
+                        .swiper-slide 
+                            .hack__image 
+                                img(src="img/content/hack.png" alt="Статья")
+                            .hack__info 
+                                p.hack__text Название статьи
+                                span 27.03.2025
+                        .swiper-slide 
+                            .hack__image 
+                                img(src="img/content/hack.png" alt="Статья")
+                            .hack__info 
+                                p.hack__text Название статьи
+                                span 27.03.2025
                         .swiper-slide 
                             .hack__image 
                                 img(src="img/content/hack.png" alt="Статья")

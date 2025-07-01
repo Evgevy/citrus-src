@@ -23,6 +23,7 @@ import { initHackSlider } from './modules/init-hack-slider';
 import { revPopup } from './modules/rev-popup';
 import { headerScroll } from './modules/header-scroll';
 import { headMobile } from './modules/head-mobile';
+import { initClassesWithoutSlider } from './modules/init-classes-without-slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -53,5 +54,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initHackSlider();
     revPopup();
     headMobile();
+    initClassesWithoutSlider();
   });
 });

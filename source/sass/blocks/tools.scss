@@ -146,6 +146,24 @@
         @media screen and (max-width: 350px) {
             max-width: 312px;
         }
+
+        
+    }
+
+    .swiper-slide--m {
+        display: none;
+
+        @media screen and (max-width: 1495px) {
+            display: flex;
+        }
+    }
+
+    .swiper-slide:hover .slide-image {
+        transform: scale(1.1);
+    }
+
+    .slide-image {
+        transition: .3s;
     }
 
 
