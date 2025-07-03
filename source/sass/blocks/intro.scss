@@ -253,6 +253,9 @@
         top: 40px;
         left: 40px;
 
+        @media screen and (max-width: 500px) {
+            left: 30px;
+        }
     }
 
     .slide-green::after {
@@ -265,6 +268,9 @@
         top: 40px;
         right: 40px;
 
+        @media screen and (max-width: 500px) {
+            right: 30px;
+        }
       
     }
 
@@ -386,6 +392,10 @@
         background: rgba(20, 21, 17, 0.5);
         top: 40px;
         left: 40px;
+
+        @media screen and (max-width: 500px) {
+            left: 30px;
+        }
     }
 
     .slide-dark::after {
@@ -397,6 +407,10 @@
         background: rgba(20, 21, 17, 0.5);
         top: 40px;
         right: 40px;
+
+        @media screen and (max-width: 500px) {
+            right: 30px;
+        }
     }
 
     .slide-dark.swiper-slide-active {
@@ -519,6 +533,10 @@
         background: rgba(197, 197, 196, 1);
         top: 40px;
         left: 40px;
+
+        @media screen and (max-width: 500px) {
+            left: 30px;
+        }
     }
 
     .slide-white::after {
@@ -530,6 +548,10 @@
         background: rgba(197, 197, 196, 1);
         top: 40px;
         right: 40px;
+
+        @media screen and (max-width: 500px) {
+            right: 30px;
+        }
 
     }
 

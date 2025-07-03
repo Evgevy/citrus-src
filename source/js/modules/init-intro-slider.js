@@ -36,14 +36,14 @@ const initIntroSlider = () => {
     preloadImages: true,
     observer: true,
     observeParents: true,
-    breakpoints: {
-      300: {
-        autoplay: false,
-      },
-      768: {
-        delay: 4000,
-      },
-    },
+    // breakpoints: {
+    //   300: {
+    //     autoplay: false,
+    //   },
+    //   768: {
+    //     delay: 4000,
+    //   },
+    // },
     
   });
 };
