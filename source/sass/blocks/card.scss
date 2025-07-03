@@ -16,56 +16,52 @@
     &__slider {
         width: 100%;
         height: 100%;
+        
+        touch-action: pan-y;
+        @media screen and (max-width: 1120px) {
+            width: 850px;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 850px) {
+            width: 100%;
+            overflow-x: visible;
+        }
+    }
+
+   
+
+   
+
+    .swiper-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 8px;
-        overflow: visible;
-        touch-action: pan-y;
         @media screen and (max-width: 1120px) {
-            display: block;
-            height: 500px;
-            position: relative;
-            width: 100%;
+            display: flex;
+            height: auto;
+            gap: 0;
+            // transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1) !important;
         }
     }
 
-    &__slider.fullwidth {
-        height: 500px;
-        touch-action: pan-y;
-    }
-
-    &__slider.fullwidth .slider-item {
-        height: 530px;
-        line-height: 500px;
-        width: 420px;
-        touch-action: pan-y;
-    }
-
-    .slider-wrapper {
-
-        @media screen and (max-width: 1120px) {
-            overflow: visible !important;
-            position: relative;
-            transform-style: preserve-3d;
-            transform-origin: 0 50%;
-            perspective: 1000px !important;
-            touch-action: pan-y;
-        }
-    }
-
-    &__slider .slider-item {
+    &__slider .swiper-slide {
         @media screen and (max-width: 1120px) {
             
-            display: none;
+            position: relative;
             height: 550px;
-            left: 0;
-            position: absolute;
-            touch-action: pan-y;
-            top: 0;
+            text-align: center;
+            aspect-ratio: 3/4;
             width: 420px;
             overflow: hidden;
             border-radius: 32px;
             padding: 30px;
+            touch-action: pan-y;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;     
+            perspective: 1000px;        
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);    
     
         @media screen and (max-width: 500px) {
             width: 320px;
@@ -74,7 +70,15 @@
         }
     }
 
-    .slider-item.slide-dark1 {
+    &__slider .swiper-slide:nth-child(n+4) {
+        display: none !important;
+
+        @media screen and (max-width: 1120px) {
+            display: flex !important;
+        }
+    }
+
+    .swiper-slide.slide-dark1 {
         background: linear-gradient(139.42deg, #252525 2.23%, #5C5C5C 97.41%);
         padding: 28px 32px 32px;
         display: flex;
@@ -89,8 +93,8 @@
             letter-spacing: -3%;
             text-align: center;
             color: rgba(251, 251, 251, 1);
-            margin: 0 0 23px;
-
+            margin: 0 auto 23px;
+            max-width: 350px;
             @include vp-767 {
                 font-size: 32px;
             }
@@ -107,6 +111,8 @@
             gap: 6px;
             margin-bottom: 30px;
             max-width: 320px;
+            padding-left: 20px;
+            text-align: start;
         }
 
         .card__item {
@@ -188,7 +194,7 @@
     }
 
 
-    .slider-item.slide-white1 {
+    .swiper-slide.slide-white1 {
         background: linear-gradient(149.22deg, #F0F0F0 2.22%, #E9E9E9 86.7%);
         // overflow: hidden;
         padding: 28px 32px 32px;
@@ -203,8 +209,8 @@
             letter-spacing: -3%;
             text-align: center;
             color: rgba(20, 21, 17, 1);
-            margin: 0 0 23px;
-
+            margin: 0 auto 23px;
+            max-width: 350px;
             @include vp-767 {
                 font-size: 32px;
             }
@@ -221,6 +227,8 @@
             gap: 6px;
             margin-bottom: 30px;
             max-width: 320px;
+            padding-left: 20px;
+            text-align: start;
         }
 
         .card__item {
@@ -277,7 +285,7 @@
         }
     }
 
-    .slider-item.slide-green1 {
+    .swiper-slide.slide-green1 {
         background: linear-gradient(139.24deg, #BEFF78 1.31%, #CDEB69 99.04%);
         // overflow: hidden;
 
@@ -293,8 +301,8 @@
             letter-spacing: -3%;
             text-align: center;
             color: rgba(20, 21, 17, 1);
-            margin: 0 0 23px;
-
+            margin: 0 auto 23px;
+            max-width: 350px;
             @include vp-767 {
                 font-size: 32px;
             }
@@ -311,6 +319,8 @@
             gap: 6px;
             margin-bottom: 30px;
             max-width: 320px;
+            padding-left: 20px;
+            text-align: start;
         }
 
         .card__item {
@@ -367,16 +377,6 @@
         }
     }
 
-    // .swiper-slide-prev {
-    //     transform: translateY(62px) rotate(-5deg) !important;
-    // }
-    
-    // .swiper-slide-next {
-    //     transform: translateY(62px) rotate(5deg) !important;
-    // }
-    
-    // .swiper-slide-active {
-    //     transform: rotate(0deg) !important;
-    // }
+
     
 }

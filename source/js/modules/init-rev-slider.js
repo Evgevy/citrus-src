@@ -9,6 +9,7 @@ const initRevSlider = () => {
         slidesPerView: 'auto',
         spaceBetween: 16,
         speed: 1000,
+        loop: true,
         navigation: {
         nextEl: '.swiper-button-next.reviews__next',
         prevEl: '.swiper-button-prev.reviews__prev',

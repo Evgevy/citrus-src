@@ -119,7 +119,7 @@
         height: 100%;
         overflow-x: visible;
         display: flex;
-
+       
         @include vp-767 {
             margin-bottom: 30px;
         }
@@ -127,6 +127,8 @@
 
     .swiper-wrapper {
         height: auto;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+        will-change: transform; /* Оптимизация анимации */
     }
 
     .swiper-slide {
@@ -137,7 +139,7 @@
         border-radius: 32px;
         padding: 32px 24px 0;
         overflow: hidden;
-        
+        transition: transform 0.5s ease, opacity 0.5s ease;
 
         @media screen and (max-width: 500px) {
             max-width: 350px;

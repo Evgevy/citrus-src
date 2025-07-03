@@ -24,7 +24,7 @@
         }
 
         @media screen and (max-width: 500px) {
-            top: 240px;
+            top: 200px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -33,7 +33,7 @@
     &__bgl {
         position: absolute;
         top: 120px;
-        right: 30px;
+        right: 60px;
 
         svg {
             @include vp-1023 {
@@ -64,16 +64,16 @@
         letter-spacing: -5%;
         text-align: center;
         text-transform: uppercase;
-        margin: 0 0 250px;
+        margin: 0 0 100px;
 
         @include vp-767 {
             font-size: 56px;
-            margin-bottom: 200px;
+            margin-bottom: 80px;
         }
 
         @media screen and (max-width: 500px) {
             font-size: 32px;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
     }
 

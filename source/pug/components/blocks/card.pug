@@ -2,32 +2,62 @@ mixin card()
     section.card 
         .container 
             .card__wrapper 
-                .card__slider   
-                    .slider-item.slide-dark1 
-                        p.card__text Токарная обработка
-                        ul.card__list 
-                            li.card__item Обрабатывают заготовки от 70 мм.
-                            li.card__item Переналадка — за минуты.
-                            li.card__item Хороши для простых деталей в большом объёме.
-                        a(href="#!").card__link Перейти в каталог
-                        .card__image 
-                            +icon('card1', 292, 225)
-                            img(src="img/content/card.png" alt="Станок")
-                    .slider-item.slide-white1
-                        p.card__text Фрезерная обработка
-                        ul.card__list 
-                            li.card__item Точность и мощность.
-                            li.card__item Вертикальные, горизонтальные, продольные модели — под разную конфигурацию обработки.
-                        a(href="#!").card__link Перейти в каталог
-                        .card__image 
-                            +icon('card2', 292, 225)
-                            img(src="img/content/card.png" alt="Станок")
-                    .slider-item.slide-green1 
-                        p.card__text Токарно-фрезерная обработка
-                        ul.card__list 
-                            li.card__item Фрезеровка и точение в одном корпусе.
-                            li.card__item Экономия площади и времени.
-                        a(href="#!").card__link Перейти в каталог
-                        .card__image 
-                            +icon('card3', 292, 225)
-                            img(src="img/content/card.png" alt="Станок")
+                .card__slider.swiper(data-slider="grade")   
+                    .swiper-wrapper
+                        .swiper-slide.slide-dark1 
+                            p.card__text Токарная обработка
+                            ul.card__list 
+                                li.card__item Обрабатывают заготовки от 70 мм.
+                                li.card__item Переналадка — за минуты.
+                                li.card__item Хороши для простых деталей в большом объёме.
+                            a(href="#!").card__link Перейти в каталог
+                            .card__image 
+                                +icon('card1', 292, 225)
+                                img(src="img/content/card.png" alt="Станок")
+                        .swiper-slide.slide-white1
+                            p.card__text Фрезерная обработка
+                            ul.card__list 
+                                li.card__item Точность и мощность.
+                                li.card__item Вертикальные, горизонтальные, продольные модели — под разную конфигурацию обработки.
+                            a(href="#!").card__link Перейти в каталог
+                            .card__image 
+                                +icon('card2', 292, 225)
+                                img(src="img/content/card.png" alt="Станок")
+                        .swiper-slide.slide-green1 
+                            p.card__text Токарно-фрезерная обработка
+                            ul.card__list 
+                                li.card__item Фрезеровка и точение в одном корпусе.
+                                li.card__item Экономия площади и времени.
+                            a(href="#!").card__link Перейти в каталог
+                            .card__image 
+                                +icon('card3', 292, 225)
+                                img(src="img/content/card.png" alt="Станок")
+                        .swiper-slide.slide-dark1 
+                            p.card__text Токарная обработка
+                            ul.card__list 
+                                li.card__item Обрабатывают заготовки от 70 мм.
+                                li.card__item Переналадка — за минуты.
+                                li.card__item Хороши для простых деталей в большом объёме.
+                            a(href="#!").card__link Перейти в каталог
+                            .card__image 
+                                +icon('card1', 292, 225)
+                                img(src="img/content/card.png" alt="Станок")
+                        .swiper-slide.slide-white1
+                            p.card__text Фрезерная обработка
+                            ul.card__list 
+                                li.card__item Точность и мощность.
+                                li.card__item Вертикальные, горизонтальные, продольные модели — под разную конфигурацию обработки.
+                            a(href="#!").card__link Перейти в каталог
+                            .card__image 
+                                +icon('card2', 292, 225)
+                                img(src="img/content/card.png" alt="Станок")
+                        .swiper-slide.slide-green1 
+                            p.card__text Токарно-фрезерная обработка
+                            ul.card__list 
+                                li.card__item Фрезеровка и точение в одном корпусе.
+                                li.card__item Экономия площади и времени.
+                            a(href="#!").card__link Перейти в каталог
+                            .card__image 
+                                +icon('card3', 292, 225)
+                                img(src="img/content/card.png" alt="Станок")
+
