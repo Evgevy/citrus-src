@@ -1,6 +1,6 @@
 .hack {
     overflow: hidden;
-
+    position: relative;
     &__wrapper {
         padding: 150px 0;
 
@@ -104,19 +104,24 @@
         // }
     }
 
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
     
 
     .swiper-button-prev,
     .swiper-button-next {
-        position: static;
+        z-index: 2;
         margin: 0;
         flex-shrink: 0;
         &::after {
             display: none;
         }
     
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         transition: .3s;
         svg {
           transition: .3s;
@@ -126,16 +131,20 @@
            opacity: 0.7;
         }
 
-        @include vp-767 {
-            width: 40px;
-            height: 40px;
+        @include vp-1023 {
+            display: none;
         }
     }
     
     .swiper-button-prev {
+        left: 20px;
         svg {
             transform: rotate(-180deg);
         }
+    }
+
+    .swiper-button-next {
+        right: 20px;
     }
 
     &__slider.swiper {

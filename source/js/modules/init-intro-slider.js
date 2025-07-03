@@ -15,6 +15,7 @@ const initIntroSlider = () => {
     slidesPerView: 'auto',
     autoplay: {
       delay: 4000,
+      disableOnInteraction:	false,
     },
 
     coverflowEffect: {
